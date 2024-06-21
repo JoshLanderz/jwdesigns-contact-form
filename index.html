@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Joshua Watson | Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/63d3360e1a.js" crossorigin="anonymous"></script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+  </style>
+</head>
+<body>
+  <main>
+    <div class="contact-form-wrapper">
+      <div class="success-wrapper" style="display: none;" id="successModal">
+        <div class="success-header">
+          <div class="success-tick-border">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div class="message-sent-header">
+            <p class="message-sent-heading">
+              Message Sent!
+            </p>
+          </div>
+        </div>
+  
+        <p class="thanks-text">
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+
+        <div class="close-btn-wrapper">
+          <i class="fa fa-close"></i>
+        </div>
+      </div>
+      <div class="contact-us-header">
+        <h1>Contact Us</h1>
+      </div>
+
+      <form class="contact-form" novalidate onsubmit="return validateForm(event)" method="post">
+          <div class="name-wrapper">
+            <div>
+              <label for="fname" class="lbl-fname">First Name *</label>
+              <input type="text" name="fname" class="fname error" placeholder="John">
+            </div>
+
+            <div>
+              <label for="lname" class="lbl-lname">Last Name *</label>
+              <input type="text" name="lname" class="lname error" placeholder="Appleseed">
+            </div>
+          </div>
+ 
+          <div class="email-wrapper">
+            <label for="email" class="lbl-email">Email Adress *</label>
+            <input type="email" name="email" class="email" placeholder="example@mail.com">
+          </div>
+
+          <div class="query-wrapper">
+            <div>
+              <label for="query">Query Type *</label>
+              <button class="general-enquiry">
+                <input type="radio" name="query">
+                <p>General Enquiry</p>
+              </button>
+            </div>
+
+            <div>
+              <button class="support-request">
+                <input type="radio" name="query">
+                <p>Support Request</p>
+              </button>
+            </div>
+          </div>
+
+          <div class="message-wrapper">
+            <label for="message">Message *</label>
+            <textarea name="message" class="message"></textarea>
+          </div>
+
+          <div class="consent-wrapper">
+            <input type="checkbox" class="consent-checkbox" name="consent">
+            <p class="consent-text">I consent to being contacted by the team *</p>
+          </div>
+          <button type="submit" class="submitBtn">Submit</button>
+        </div> 
+      </form>
+    </div>
+
+  </main>
+
+  <script src="script.js" type="text/javascript"></script>
+  <!--Contact Us
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon!
+  -->
+</body>
+</html>

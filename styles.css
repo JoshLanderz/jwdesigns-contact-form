@@ -1,0 +1,335 @@
+:root {
+    --lighter-green: hsl(148, 38%, 91%);
+    --green: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+
+/*Neutral*/
+
+    --white: hsl(0, 0%, 100%);
+    --grey-medium: hsl(186, 15%, 59%);
+    --grey-darker: hsl(187, 24%, 22%);
+
+    --ff-Karla: "Karla", sans-serif;
+}
+
+html, body {
+    position: relative;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    height: 100%;
+    background-color: var(--lighter-green);
+    margin: 50px;
+    margin-inline: 12px;
+}
+
+* {
+    font-family: var(--ff-Karla);
+}
+
+h1, h2, h3, p, input, button, textarea {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    resize: vertical;
+}
+
+/*::after {
+    display: none;
+}*/
+
+.close-btn-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close-btn-wrapper i {
+    color: rgb(255, 255, 255);
+}
+
+.success-close {
+    display: none;
+}
+
+.success-wrapper {
+    position: fixed;
+    gap: 14px;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--grey-darker);
+    border-radius: 15px;
+    padding: 1.2rem 2rem;
+    animation-name: successModal;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    opacity: 1;
+}
+
+@keyframes successModal {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.success-header {
+    display: flex;
+    gap: 0.8em;
+    align-items: center;
+}
+
+.success-tick-border {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: grid;
+    place-content: center;
+}
+
+.success-tick-border i {
+    border-radius: 50%;
+    color: white;
+    font-size: 14px;
+}
+
+.message-sent-heading {
+    width: max-content;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.thanks-text {
+    color: rgba(255, 255, 255, 0.7);
+    width: max-content;
+    font-size: 14px;
+} 
+
+.contact-form-wrapper {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    display: grid;
+    gap: 40px;
+    margin-bottom: 10rem;
+}
+
+form {
+    display: grid;
+    gap: 40px;
+}
+
+input[type="text"], input[type="email"], .query-wrapper button {
+    border-radius: 1px;
+    background: none;
+    border: 1px solid var(--grey-darker);
+    border-radius: 5px;
+    padding-block: 10px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.6);
+    text-indent: 20px;
+}
+
+
+input[type="text"]:hover, input[type="email"]:hover {
+    border: 1px solid var(--green);
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    border: 1px solid var(--green);
+}
+
+.query-wrapper button:focus {
+    border: 1px solid var(--green);
+}
+
+.contact-us-header h1 {
+    font-weight: 700;
+    color: var(--grey-darker);
+}
+
+label {
+    position: relative;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    display: block;
+}
+
+form div {
+    display: grid;
+    gap: 15px;
+}
+
+.fname {
+    margin-bottom: 15px;
+}
+
+.c2 {
+    display: grid;
+    width: 100%;
+    gap: 40px;
+}
+
+.query-wrapper {
+    display: grid;
+    position: relative;
+}
+
+.query-wrapper button {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    color: var(--grey-darker);
+    cursor: pointer;
+}
+
+input[type=radio], input[type=checkbox] {
+    cursor: pointer;
+    accent-color: var(--green);
+}
+
+
+textarea, .message-wrapper {
+    border-radius: 5px;
+}
+
+.message-wrapper {
+    position: relative;
+}
+
+textarea {
+    height: 120px;
+    text-align: left;
+    padding: 1rem;
+    font-size: 13px;
+    line-height: 15px;
+    border-color: rgba(0, 0, 0, 0.6);
+    resize: none;
+}
+
+.consent-wrapper {
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+.consent-wrapper input {
+    cursor: pointer;
+}
+
+.consent-text {
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.submitBtn {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.submitBtn:hover {
+    cursor: pointer;
+    background-color: var(--grey-darker);
+}
+
+
+/*Error States*/
+input[type="text"], input[type="email"] {
+    border-color: none /*red*/;
+}
+
+.lbl-fname.error:after, .lbl-lname.error:after, .lbl-email.error:after, .lbl-query.error:after {
+    position: absolute;
+    content: "This field is required";
+    color: red;
+    margin-top: 5px;
+    font-size: 0.7em;
+    bottom: -70px;
+    left: 0px;
+}
+
+.lbl-email.error:after {
+    content: "Please enter a valid email address";
+}
+
+.query-wrapper.error:after, .message-wrapper.error:after, .consent-wrapper.error:after {
+    position: absolute;
+    content: "Please select a query type";
+    color: red;
+    margin-top: 5px;
+    font-size: 0.7em;
+    bottom: -20px;
+    left: 0px;
+}
+
+
+.message-wrapper.error:after {
+    content: "This field is required";
+}
+
+.consent-wrapper.error:after {
+    content: "To submit this form, please consent to being contacted";
+}
+
+
+@media screen and (min-width: 600px) {
+    .name-wrapper {
+        display: flex;
+        width: 100%;
+    }
+
+    .name-wrapper div {
+        width: 100%;
+    }
+
+    .fname {
+        margin: 0;
+    }
+
+    .query-wrapper {
+        display: flex;
+        align-items: end;
+        margin: 0;
+        padding: 0;
+    }
+
+    .query-wrapper div {
+        display: grid;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 720px) {
+
+    html, body {
+        display: grid;
+        justify-content: center;
+        place-items: center;
+        margin-top: 20px;
+        margin-inline: 0px;
+    }
+
+    .contact-form-wrapper {
+        width: 600px;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    .contact-form-wrapper {
+        width: 800px;
+    }
+}
