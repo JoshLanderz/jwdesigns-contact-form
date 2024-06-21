@@ -8,7 +8,7 @@ This is a solution to the [Contact form challenge on Frontend Mentor](https://ww
 ![Alt text](Screenshot - Joshua Watson, Frontend Mentor Contact form.png?raw=true "Optional Title")
 
 ### Preview Site
-- Live Site URL: [Add live site URL here](https://jwdesigns-contactform.netlify.app/)
+- Live Site URL: [[Add live site URL here](https://jwdesigns-contactform.netlify.app/)](https://jwdesigns-contactform.netlify.app/)
 
 # Created with
 - HTML
