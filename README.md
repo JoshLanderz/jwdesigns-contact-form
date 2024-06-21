@@ -5,7 +5,7 @@
 This is a solution to the [Contact form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ### Screenshot
-![Alt text](Screenshot - Joshua Watson, Frontend Mentor Contact form.png?raw=true "Optional Title")
+![Alt text](Screenshot - Joshua Watson, Frontend Mentor Contact form.png)
 
 ### Preview Site
 - Live Site URL: https://jwdesigns-contactform.netlify.app/
