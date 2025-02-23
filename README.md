@@ -14,18 +14,6 @@ This is a solution to the [Contact form challenge on Frontend Mentor](https://ww
 - CSS
 - JavaScript
 
-### The challenge
-Users should be able to:
-
-- Complete the form and see a success toast message upon successful submission (DONE)
-- Receive form validation messages if:
-  - A required field has been missed (DONE)
-  - The email address is not formatted correctly (DONE)
-- Complete the form only using their keyboard (DONE)
-- Have inputs, error messages, and the success message announced on their screen reader (DONE)
-- View the optimal layout for the interface depending on their device's screen size (DONE)
-- See hover and focus states for all interactive elements on the page (DONE)
-
 ## Author
 - Frontend Mentor - [@JoshLanderz19](https://www.frontendmentor.io/profile/JoshLanderz19)
 - Github - https://github.com/JoshLanderz
